@@ -30,7 +30,7 @@ export default function SearchBookDetails() {
             .catch(err => {
                 setError(err.message)
             })
-        axios.get(`${process.env.REACT_APP_SERVER_URL}/books/${id}?title=${book.volumeInfo.title}&author=${book.volumeInfo.authors[0]}`)
+        axios.get(`${process.env.REACT_APP_SERVER_URL}books/${id}?title=${book.volumeInfo.title}&author=${book.volumeInfo.authors[0]}`)
             .then(response => {
                 if (response.status === 200) {
                     console.log(response.data)
